@@ -1,7 +1,7 @@
 ---
 title: SciExplora
 publishDate: 2023-11-01 00:00:00
-img: ./assets/sciexplora.png
+img: /portfolio/assets/sciexplora.png
 img_alt: screen du site
 description: |
   site static en html/css avec quelque légères animations

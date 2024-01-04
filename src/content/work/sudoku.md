@@ -1,7 +1,7 @@
 ---
 title: Sudoku
 publishDate: 2023-11-24 00:00:00
-img: ./assets/sudoku.png
+img: /portfolio/assets/sudoku.png
 img_alt: image de sudoku dans un terminal
 description: |
   création d'un sudoku en langage C pour fonctionné dans un terminal linux et windows
