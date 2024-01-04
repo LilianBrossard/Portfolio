@@ -1,7 +1,7 @@
 ---
 title: Bonifacio
 publishDate: 2023-10-02 00:00:00
-img: /assets/bonifacio_site.png
+img: ./assets/bonifacio_site.png
 img_alt: image du site "Bonifacio"
 description: |
   Site pour exercer mes premières connaissances en dev web.

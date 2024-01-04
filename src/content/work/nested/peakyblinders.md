@@ -1,7 +1,7 @@
 ---
 title: Site de streaming
 publishDate: 2023-12-27 00:00:00
-img: /assets/peaky_blinders_site.png
+img: ./assets/peaky_blinders_site.png
 img_alt: screen du site web
 description: |
   J'ai travaillé sur un site de critique/streaming de série. 
