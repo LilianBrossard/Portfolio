@@ -10,6 +10,6 @@ tags:
   - front-end
 ---
 
-Bonifacio fut le premier site pour m'entraîner avec mes premiers cours de web, avec les bases de css, html. J'ai donc recopié un site d'entraînement avec seulement une image a imité.
+Bonifacio fut le premier site pour m'entraîner avec mes premiers cours de web, avec les bases de css, html. J'ai donc recopié un site d'entraînement avec seulement une image à imiter.
 
 Avec dès connaissance sommaire, j'ai donc recréé ce site d'exercice.
