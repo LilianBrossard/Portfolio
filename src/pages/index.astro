@@ -6,8 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Component Imports
 import CallToAction from "../components/CallToAction.astro";
-import Grid from "../components/Grid.astro";
-import Hero from "../components/Hero.astro";
+import Information from "../components/Information.astro";
 import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
@@ -25,111 +24,84 @@ const projects = (await getCollection("work"))
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
+<!-- class="rellax" data-rellax-speed="-2" --><!-- data-aos="fade-up" -->
 <BaseLayout>
-  <div class="stack gap-20 lg:gap-48">
-    <div class="wrapper stack gap-8 lg:gap-20">
-      <header class="hero">
-        <Hero
-          title="Bonjour, je m'appelle Lilian Brossard"
-          tagline="Je suis développeur Astro, JavaScript, SQL, C"
-          align="start"
-        >
-          <div class="roles">
-            <Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
-            <Pill><Icon icon="strategy" size="1.33em" /> Etudiant</Pill>
-          </div>
-        </Hero>
-
-        <img
-          alt="Lilian Brossard souriant avec un font orange"
-          width="480"
-          height="620"
-          src="/portfolio/assets/portrait.jpg"
-        />
-      </header>
-
-      <Skills />
+  <div>
+    <div class="absolute fond rellax" data-rellax-speed="-5">
+      <img src="/portfolio/assets/fondfonce.jpg" alt="image de fond" />
     </div>
-
-    <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background with-cta">
-        <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Derniers projets</h3>
-          <p>voici mes derniers projets fait tout seul ou en équipe</p>
-        </header>
-
-        <div class="gallery">
-          <Grid variant="offset">
-            {
-              projects.map((project) => (
-                <li>
-                  <PortfolioPreview project={project} />
-                </li>
-              ))
-            }
-          </Grid>
+    <header>
+      <Information
+        title="Je suis Lilian Brossard"
+        subtitle="Développeur Astro, JavaScript, SQL, C"
+        img="/portfolio/assets/portrait.jpg"
+        alt="Lilian Brossard souriant avec un font orange"
+      >
+        <div class="roles">
+          <Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
+          <Pill><Icon icon="strategy" size="1.33em" /> Etudiant</Pill>
         </div>
-
-        <div class="cta">
-          <CallToAction href="/portfolio/work/">
-            En voir plus
-            <Icon icon="arrow-right" size="1.2em" />
-          </CallToAction>
+      </Information>
+    </header>
+    <div class="trente"></div>
+    <div class="background transi">
+      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <Skills />
+      </div>
+    </div>
+    <main>
+      <div class="background transi">
+        <div
+          class="row between margin"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <div>
+            <h3>Derniers projets</h3>
+            <p>voici mes derniers projets fait tout seul ou en équipe</p>
+          </div>
+          <div class="cta">
+            <CallToAction href="/portfolio/work/">
+              En voir plus
+              <Icon icon="arrow-right" size="1.2em" />
+            </CallToAction>
+          </div>
         </div>
-      </section>
+      </div>
+      <div class="background">
+        <div class="trente absolute"></div>
+        <div class="trente absolute"></div>
+      </div>
     </main>
-
+    <div class="listPreview">
+      {
+        projects.map((project) => (
+          <div>
+            <PortfolioPreview project={project} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="background">
     <ContactCTA />
   </div>
 </BaseLayout>
 
 <style>
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
   .roles {
     display: none;
   }
 
-  .hero img {
-    aspect-ratio: 5 / 4;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 1.5rem;
-    box-shadow: var(--shadow-md);
-  }
-
   @media (min-width: 50em) {
-    .hero {
-      display: grid;
-      grid-template-columns: 6fr 4fr;
-      padding-inline: 2.5rem;
-      gap: 3.75rem;
-    }
-
     .roles {
       margin-top: 0.5rem;
       display: flex;
       gap: 0.5rem;
     }
-
-    .hero img {
-      aspect-ratio: 3 / 4;
-      border-radius: 4.5rem;
-      object-fit: cover;
-    }
   }
 
   /* ====================================================== */
-
-  .section {
-    display: grid;
-    gap: 2rem;
-  }
 
   .with-background {
     position: relative;
@@ -159,71 +131,9 @@ const projects = (await getCollection("work"))
     --hero-bg: var(--bg-image-subtle-1);
   }
 
-  .section-header {
-    justify-self: center;
-    text-align: center;
-    max-width: 50ch;
-    font-size: var(--text-md);
-    color: var(--gray-300);
-  }
-
-  .section-header h3 {
-    font-size: var(--text-2xl);
-  }
-
   @media (min-width: 50em) {
-    .section {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "header header header header" "gallery gallery gallery gallery";
-      gap: 5rem;
-    }
-
-    .section.with-cta {
-      grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
-    }
-
-    .section-header {
-      grid-area: header;
-      font-size: var(--text-lg);
-    }
-
-    .section-header h3 {
-      font-size: var(--text-4xl);
-    }
-
-    .with-cta .section-header {
-      justify-self: flex-start;
-      text-align: left;
-    }
-
-    .gallery {
-      grid-area: gallery;
-    }
-
     .cta {
       grid-area: cta;
-    }
-  }
-
-  /* ====================================================== */
-
-  .mention-card {
-    display: flex;
-    height: 7rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 1px solid var(--gray-800);
-    border-radius: 1.5rem;
-    color: var(--gray-300);
-    background: var(--gradient-subtle);
-    box-shadow: var(--shadow-sm);
-  }
-
-  @media (min-width: 50em) {
-    .mention-card {
-      border-radius: 1.5rem;
-      height: 9.5rem;
     }
   }
 </style>

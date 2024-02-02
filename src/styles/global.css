@@ -16,10 +16,10 @@
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gray-999: #ffffff;
 
-	--accent-light: #c561f6;
-	--accent-regular: #7611a6;
-	--accent-dark: #1c0056;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
+	--accent-light: #04D939;
+	--accent-regular: #027333;
+	--accent-dark: #012340;
+	--accent-overlay: #025939;
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
 
@@ -38,7 +38,7 @@
 	);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#025939,
 		var(--accent-regular),
 		var(--accent-dark)
 	);
@@ -88,20 +88,20 @@
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
 
-	--accent-light: #1c0056;
-	--accent-regular: #7611a6;
-	--accent-dark: #c561f6;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
-	--accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
+	--accent-light: #012340;
+	--accent-regular: #027333;
+	--accent-dark: #04D939;
+	--accent-overlay: #03A63C;
+	--accent-subtle-overlay: #012340;
 	--accent-text-over: var(--gray-0);
 
 	--link-color: var(--accent-dark);
 
-	--gradient-stop-1: #4c11c6;
+	--gradient-stop-1: #025939;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#03A63C,
 		var(--accent-regular),
 		var(--accent-light)
 	);
@@ -118,7 +118,7 @@
 html,
 body {
 	height: 100%;
-	overflow-x: hidden;
+	width: 100vw;
 }
 
 body {
@@ -201,55 +201,64 @@ h5 {
 	display: flex;
 	flex-direction: column;
 }
-
-.gap-2 {
-	gap: 0.5rem;
+.row {
+	display: flex;
+	flex-direction: row;
 }
-.gap-4 {
-	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
-}
-.gap-10 {
-	gap: 2.5rem;
-}
-.gap-15 {
-	gap: 3.75rem;
-}
-.gap-20 {
-	gap: 5rem;
-}
-.gap-30 {
-	gap: 7.5rem;
-}
-.gap-48 {
-	gap: 12rem;
+.between {
+	display: flex;
+	justify-content: space-between;
 }
 
+.move{
+  transform: translate(0, 0);
+  transition: 0.5s ease-in-out;
+}
+.move:hover {
+  transform: translate(-3px, -3px);
+  transition: 0.3s ease-in-out;
+}
+
+.margin {
+  margin: 1rem;
+}
+.transi{
+	padding: 0.5rem 0;
+}
 @media (min-width: 50em) {
-	.lg\:gap-2 {
-		gap: 0.5rem;
+	.margin {
+		margin: 4rem;
 	}
-	.lg\:gap-4 {
-		gap: 1rem;
-	}
-	.lg\:gap-8 {
-		gap: 2rem;
-	}
-	.lg\:gap-10 {
-		gap: 2.5rem;
-	}
-	.lg\:gap-15 {
-		gap: 3.75rem;
-	}
-	.lg\:gap-20 {
-		gap: 5rem;
-	}
-	.lg\:gap-30 {
-		gap: 7.5rem;
-	}
-	.lg\:gap-48 {
-		gap: 12rem;
+	.transi{
+		padding: 2rem 0;
 	}
 }
+
+.fond{
+	z-index: -10;
+}
+.fond>img{
+	min-height: 100vh;
+	min-width: 100vw;
+	object-fit: cover;
+}
+
+.background{
+	background-color:var(--gray-999);
+}
+.trente{
+	height: 30vh;
+	width: 100vw;
+}
+
+.absolute{
+	position: absolute;
+}
+
+body{
+	overflow-x: hidden;
+}
+.listPreview{
+	display: flex;
+	flex-direction: column;
+align-items: center;}
