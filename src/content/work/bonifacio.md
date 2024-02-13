@@ -3,6 +3,7 @@ title: Bonifacio
 publishDate: 2023-10-02 00:00:00
 img: /portfolio/assets/bonifacio_site.png
 img_alt: image du site "Bonifacio"
+code: https://github.com/LilianBrossard/bonifacio
 description: |
   Site pour exercer mes premières connaissances en dev web.
 tags:

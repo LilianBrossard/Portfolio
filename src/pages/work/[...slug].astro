@@ -31,7 +31,7 @@ const { Content } = await entry.render();
   <div class="stack">
     <div class="stack">
       <header>
-        <div class="wrapper stack">
+        <div class="wrapper stack margin_top">
           <a class="back-link" href="/portfolio/work/"
             ><Icon icon="arrow-left" /> Projets</a
           >
@@ -48,14 +48,40 @@ const { Content } = await entry.render();
         </div>
       </header>
       <main class="wrapper">
-        <div class="stack content" data-aos="flip-up">
+        <div class="stack content" >
           {
             entry.data.img && (
-              <img src={entry.data.img} alt={entry.data.img_alt || ""} />
+              <img data-aos="flip-up" src={entry.data.img} alt={entry.data.img_alt || ""} />
             )
           }
           <div class="content">
             <Content />
+          </div>
+          <div class="row wrap between">
+            {
+              entry.data.code && (
+                <a class="move row wrap center" href={entry.data.code} target="_blank">
+                    <img
+                      class="logo"
+                      src="/portfolio/assets/code.svg"
+                      alt="logo de code"
+                    />
+                    Lien vers le code Git
+                </a>
+              )
+            }
+            {
+              entry.data.site && (
+                <a class="move row wrap center" href={entry.data.site} target="_blank">
+                    <img
+                      class="logo"
+                      src="/portfolio/assets/site.svg"
+                      alt="logo de site"
+                    />
+                    Lien vers le site web
+                </a>
+              )
+            }
           </div>
         </div>
       </main>
@@ -67,6 +93,13 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <style>
+  .margin_top{
+    margin-top: 20px;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
   header {
     padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--gray-800);

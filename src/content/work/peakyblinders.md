@@ -3,6 +3,8 @@ title: Site de streaming
 publishDate: 2023-12-27 00:00:00
 img: /portfolio/assets/peaky_blinders_site.png
 img_alt: screen du site web
+code: https://github.com/LilianBrossard/PeakyBlinders
+site: https://lilianbrossard.github.io/PeakyBlinders/
 description: |
   J'ai travaillé sur un site de critique/streaming de série. 
 tags:
