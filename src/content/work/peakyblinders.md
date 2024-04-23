@@ -8,9 +8,9 @@ site: https://lilianbrossard.github.io/PeakyBlinders/
 description: |
   J'ai travaillé sur un site de critique/streaming de série. 
 tags:
-  - animations
-  - front end
-  - travail en équipe
+  - Réaliser
+  - Collaborer
+  - Web
 ---
 
 

@@ -9,9 +9,9 @@ site: https://lilianbrossard.github.io/anvil/
 description: |
   J'ai travaillé sur un site de référencement de vaisseaux fictifs. 
 tags:
-  - animations
-  - front end
-  - Astro
+  - Réaliser
+  - Animations
+  - Web
 ---
 
 J'ai travaillé sur un site web nommé Anvil Aerospace du nom d'une marque fictive de l'univers de Star Citizen.

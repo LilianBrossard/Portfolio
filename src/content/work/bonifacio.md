@@ -7,8 +7,8 @@ code: https://github.com/LilianBrossard/bonifacio
 description: |
   Site pour exercer mes premières connaissances en dev web.
 tags:
-  - Design
-  - front-end
+  - Réaliser
+  - Web
 ---
 
 Bonifacio fut le premier site pour m'entraîner avec mes premiers cours de web, avec les bases de css, html. J'ai donc recopié un site d'entraînement avec seulement une image à imiter.

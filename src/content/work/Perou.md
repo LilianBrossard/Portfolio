@@ -9,10 +9,10 @@ site: https://perou.vercel.app/
 description: |
   Ici j'y présente la création d'un pays sur un jeu.
 tags:
-  - front end
-  - Hygraph
-  - TailwindCss
-  - Astro
+  - Réaliser
+  - Administrer
+  - Optimiser
+  - Web
 ---
 
 Ce projet consiste à la présentation sur un jeu vidéo de notre pays.

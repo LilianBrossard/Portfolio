@@ -9,10 +9,9 @@ site: https://votre-site-akfr.vercel.app/
 description: |
   J'ai créé un site vitrine d'entreprise qui pourrait être le vôtre.
 tags:
-  - front end
-  - Hygraph
-  - TailwindCss
-  - Astro
+  - Conduire
+  - Réaliser
+  - Administrer
 ---
 
 Ce projet consiste à créer un site qui pourrait être celui d'une entreprise de la tech et de l'innovation.

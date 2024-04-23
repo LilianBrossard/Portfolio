@@ -7,8 +7,9 @@ code: https://github.com/LilianBrossard/Sudoku
 description: |
   création d'un sudoku en langage C pour fonctionner dans un terminal linux et windows
 tags:
-  - algorithme
-  - logiciel
+  - Réaliser
+  - Optimiser
+  - Conduire
 ---
 
 Ce projet dans le cadre des études a nécessité plusieurs étapes :

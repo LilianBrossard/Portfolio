@@ -8,9 +8,9 @@ site: https://lilianbrossard.github.io/portfolio/
 description: |
   J'ai travaillé sur ce portfolio sur lequel vous regardez actuellement cet article. 
 tags:
-  - animations
-  - front end
-  - Astro
+  - Réaliser
+  - Conduire
+  - Web
 ---
 
 J'ai travaillé sur mon portfolio avec la librairie Astro et d'autre librairie d'animation comme AOS, ou Rellax.

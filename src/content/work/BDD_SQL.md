@@ -8,9 +8,10 @@ description: |
   création d'une base de données représentant une formation de BUT informatique
 
 tags:
+  - Gerer
+  - Collaborer
   - SQL
   - BDD
-  - Travail d'équipe
 ---
 
 Ce projet dans le cadre des études a nécessité plusieurs étapes :
