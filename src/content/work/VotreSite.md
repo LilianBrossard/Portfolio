@@ -1,7 +1,7 @@
 ---
 title: Votre Site
 publishDate: 2024-04-01 00:00:00
-img: /portfolio/assets/VotreSite.png
+img: /assets/VotreSite.png
 img_alt: screen du site web
 code: https://github.com/LilianBrossard/Votre-Site
 site: https://votre-site-akfr.vercel.app/

@@ -1,7 +1,7 @@
 ---
 title: BDD_SQL
 publishDate: 2024-01-20 00:00:00
-img: /portfolio/assets/BDD_SQL.jpg
+img: /assets/BDD_SQL.jpg
 img_alt: image d'une base de données en forme de diagramme de classe
 code: https://github.com/LilianBrossard/butinfoSQL
 description: |

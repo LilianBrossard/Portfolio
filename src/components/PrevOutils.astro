@@ -1,0 +1,15 @@
+---
+interface Props {
+    url: string;
+    text: string;
+}
+
+const { url, text } = Astro.props;
+---
+
+<div
+    class="w-48 h-16 p-1 lg:p-2 m-2 lg:m-4 flex flex-row flex-nowrap lg:hover:scale-110 lg:duration-500 bg-slate-900 border-2 border-slate-300 items-center justify-around"
+>
+    <img src={url} alt={text} class="w-12 h-12" />
+    <h3 class="text-text-xl lg:text-2xl text-white">{text}</h3>
+</div>

@@ -1,139 +1,112 @@
 ---
 import { getCollection } from "astro:content";
 
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from "../layouts/BaseLayout.astro";
-
-// Component Imports
-import CallToAction from "../components/CallToAction.astro";
-import Information from "../components/Information.astro";
-import Icon from "../components/Icon.astro";
-import Pill from "../components/Pill.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import TopPage from "../components/TopPage.astro";
+import Titre from "../components/Titre.astro";
+import Outils from "../components/Outils.astro";
+import Formation from "../components/Formation.astro";
+import QuiSuisJe from "../components/QuiSuisJe.astro";
+import SavoirEtre from "../components/SavoirEtre.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
+import Footer from "../components/Footer.astro";
 
-// Page section components
-import ContactCTA from "../components/ContactCTA.astro";
-import Skills from "../components/Skills.astro";
+import Realiser from "../components/Realiser.astro";
+import Optimiser from "../components/Optimiser.astro";
+import Administrer from "../components/Administrer.astro";
+import Gerer from "../components/Gerer.astro";
+import Conduire from "../components/Conduire.astro";
+import Collaborer from "../components/Collaborer.astro";
 
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection("work"))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const projects = (await getCollection("work")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
 ---
 
-<!-- class="rellax" data-rellax-speed="-2" --><!-- data-aos="fade-up" -->
-<BaseLayout>
-  <div>
-    <div class="absolute fond rellax" data-rellax-speed="-5">
-      <img src="/portfolio/assets/fondfonce.jpg" alt="image de fond" />
-    </div>
-    <header>
-      <Information
-        title="Je suis Lilian Brossard"
-        subtitle="Développeur Astro, JavaScript, SQL, C"
-        img="/portfolio/assets/portrait.jpg"
-        alt="Lilian Brossard souriant avec un font orange"
-      >
-        <div class="roles">
-          <Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
-          <Pill><Icon icon="strategy" size="1.33em" /> Etudiant</Pill>
-        </div>
-      </Information>
-    </header>
-    <div class="trente"></div>
-    <div class="background transi">
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-        <Skills />
-      </div>
-    </div>
-    <main>
-      <div class="background transi">
-        <div
-          class="row between margin"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <div>
-            <h3>Derniers projets</h3>
-            <p>voici mes derniers projets fait tout seul ou en équipe</p>
-          </div>
-          <div class="cta">
-            <CallToAction href="/portfolio/work/">
-              En voir plus
-              <Icon icon="arrow-right" size="1.2em" />
-            </CallToAction>
-          </div>
-        </div>
-      </div>
-      <div class="background">
-        <div class="trente absolute"></div>
-        <div class="trente absolute"></div>
-      </div>
-    </main>
-    <div class="listPreview">
-      {
-        projects.map((project) => (
-          <div>
-            <PortfolioPreview project={project} />
-          </div>
-        ))
-      }
-    </div>
-  </div>
-  <div class="background">
-    <ContactCTA />
-  </div>
-</BaseLayout>
+<Layout title="Lilian Brossard">
+	<main>
+		<!-- https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?w=1920&h=1080&portrait=0&s=1&q=60&ver=apr-29-5&src=https://www.islamicity.org/covers/Allah/images/01-universe-declares/07-010.jpg&portrait=0&filemtime=1556437343&ttv= -->
+		<div class="bg-repeat-y bg-[url('/assets/star.jpg')] w-screen h-full">
+			<Header />
+			<TopPage />
+			<Titre
+				><h1 class="text-white text-2xl lg:text-4xl z-20">
+					Outils maitrisés
+				</h1>
+			</Titre>
+			<div data-aos="fade-right">
+				<Outils />
+			</div>
+			<div id="Propos">
+				<Titre
+					><h1 class="text-white text-2xl lg:text-4xl z-20">
+						A-Propos
+					</h1>
+				</Titre>
+			</div>
+			<div id="QuiSuisJe">
+				<div data-aos="fade-left">
+					<QuiSuisJe />
+				</div>
+			</div>
+			<div id="Formation">
+				<div data-aos="fade-right">
+					<Formation />
+				</div>
+			</div>
+			<div id="SavoirEtre">
+				<div data-aos="fade-left">
+					<SavoirEtre />
+				</div>
+			</div>
+			<div class="h-8"></div>
+			<!-- https://static.vecteezy.com/system/resources/previews/003/692/649/large_2x/beautiful-clear-blue-sky-in-summer-look-lke-heaven-free-photo.jpg -->
 
-<style>
-  .roles {
-    display: none;
-  }
+			<div id="Projet">
+				<Titre
+					><h1 class="text-white text-2xl lg:text-4xl z-20">
+						Mes Projets
+					</h1>
+				</Titre>
+			</div>
+			<div class="listPreview">
+				{
+					projects.map((project) => (
+						<div class="w-screen" data-aos="fade-up">
+							<PortfolioPreview project={project} />
+						</div>
+					))
+				}
+			</div>
 
-  @media (min-width: 50em) {
-    .roles {
-      margin-top: 0.5rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-  }
+			<div id="Competences">
+				<Titre
+					><h1 class="text-white text-2xl lg:text-4xl z-20">
+						Les Compétences Techniques
+					</h1>
+				</Titre>
+			</div>
+			<div data-aos="fade-right">
+				<Realiser />
+			</div>
+			<div data-aos="fade-left">
+				<Optimiser />
+			</div>
+			<div data-aos="fade-right">
+				<Administrer />
+			</div>
+			<div data-aos="fade-left">
+				<Gerer />
+			</div>
+			<div data-aos="fade-right">
+				<Conduire />
+			</div>
+			<div data-aos="fade-left">
+				<Collaborer />
+			</div>
 
-  /* ====================================================== */
-
-  .with-background {
-    position: relative;
-  }
-
-  .with-background::before {
-    --hero-bg: var(--bg-image-subtle-2);
-
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    left: 50%;
-    width: 100vw;
-    aspect-ratio: calc(2.25 / var(--bg-scale));
-    top: 0;
-    transform: translateY(-75%) translateX(-50%);
-    background:
-      url("/assets/backgrounds/noise.png") top center/220px repeat,
-      var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-      var(--gray-999);
-    background-blend-mode: overlay, normal, normal, normal;
-    mix-blend-mode: var(--bg-blend-mode);
-    z-index: -1;
-  }
-
-  .with-background.bg-variant::before {
-    --hero-bg: var(--bg-image-subtle-1);
-  }
-
-  @media (min-width: 50em) {
-    .cta {
-      grid-area: cta;
-    }
-  }
-</style>
+			<Footer />
+		</div>
+	</main>
+</Layout>

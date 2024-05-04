@@ -1,7 +1,7 @@
 ---
 title: Sudoku
 publishDate: 2023-11-24 00:00:00
-img: /portfolio/assets/sudoku.png
+img: /assets/sudoku.png
 img_alt: image de sudoku dans un terminal
 code: https://github.com/LilianBrossard/Sudoku
 description: |

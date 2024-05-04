@@ -1,7 +1,7 @@
 ---
 title: Perou (Minecraft)
 publishDate: 2024-03-24 00:00:00
-img: /portfolio/assets/Perou.png
+img: /assets/Perou.png
 img_alt: screen du site web
 code: https://github.com/LilianBrossard/Perou
 site: https://perou.vercel.app/

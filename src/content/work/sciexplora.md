@@ -1,7 +1,7 @@
 ---
 title: SciExplora
 publishDate: 2023-11-01 00:00:00
-img: /portfolio/assets/sciexplora.png
+img: /assets/sciexplora.png
 img_alt: screen du site
 code: https://github.com/LilianBrossard/SciExplora
 site: https://lilianbrossard.github.io/SciExplora/

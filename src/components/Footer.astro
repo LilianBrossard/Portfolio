@@ -1,90 +1,73 @@
 ---
-import Icon from "./Icon.astro";
-const currentYear = new Date().getFullYear();
+import Titre from "./Titre.astro";
 ---
 
-<footer>
-  <div class="group">
-    <p>
-      créer avec <a href="https://astro.build/">Astro</a>
-      <Icon icon="rocket-launch" size="1.2em" />
-    </p>
-    <p>&copy; {currentYear} Lilian Brossard</p>
-  </div>
-  <p class="socials">
-    <a href="https://github.com/LilianBrossard" target="_blank"> GitHub</a>
+<div id="Contacte">
+    <Titre
+        ><h1 class="text-white text-2xl lg:text-4xl z-20">Contactez-moi</h1>
+    </Titre>
+</div>
+<div class="w-screen m-1 lg:mx-32 lg:my-8 flex flex-col justify-around">
     <a
-      href="/portfolio/assets/CV_LilianBrossard.pdf"
-      target="_blank"
-      class="row"
-      ><img
-        src="/portfolio/assets/cv.svg"
-        alt=""
-        title="logo pdf"
-        class="image"
-      /> Mon CV</a
+        href="mailto:lilian.brossard@mail.com"
+        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
     >
-    <a href="mailto:lilian.brossard@gmail.com" target="_blank">
-      lilian.brossard@gmail.com</a
+        <div
+            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
+        >
+            <img src="/assets/mail.svg" alt="mail" class="w-8 h-8" />
+            <h3 class="ml-2">lilian.brossard@gmail.com</h3>
+        </div>
+    </a>
+    <div class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2">
+        <div
+            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
+        >
+            <img src="/assets/tel.svg" alt="telephone" class="w-8 h-8" />
+            <h3 class="ml-2">06 47 57 78 28</h3>
+        </div>
+    </div>
+    <a
+        href="https://github.com/LilianBrossard"
+        target="_blank"
+        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
     >
-  </p>
-</footer>
-<style>
-  .image {
-    width: 1.2em;
-    height: 1.2em;
-  }
-  footer {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-top: auto;
-    padding: 3rem 2rem 3rem;
-    text-align: center;
-    color: var(--gray-400);
-    font-size: var(--text-sm);
-  }
+        <div
+            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
+        >
+            <img src="/assets/git.svg" alt="github logo" class="w-8 h-8" />
+            <h3 class="ml-2">Mon GitHub</h3>
+        </div>
+    </a>
+    <a
+        href="https://www.linkedin.com/in/lilian-brossard-1b6147294/"
+        target="_blank"
+        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+    >
+        <div
+            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
+        >
+            <img src="/assets/linkedin.svg" alt="linkedin" class="w-8 h-8" />
+            <h3 class="ml-2">LinkedIn</h3>
+        </div>
+    </a>
+    <a
+        href="/assets/CV_LilianBrossard.pdf"
+        target="_blank"
+        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+    >
+        <div
+            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
+        >
+            <img src="/assets/pdf.svg" alt="pdf" class="w-8 h-8" />
+            <h3 class="ml-2">Mon Cv</h3>
+        </div>
+    </a>
+</div>
 
-  footer a {
-    color: var(--gray-400);
-    text-decoration: 1px solid underline transparent;
-    text-underline-offset: 0.25em;
-    transition: text-decoration-color var(--theme-transition);
-  }
-
-  footer a:hover,
-  footer a:focus {
-    text-decoration-color: currentColor;
-  }
-
-  .group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .socials {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  @media (min-width: 50em) {
-    footer {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 2.5rem 5rem;
-    }
-
-    .group {
-      flex-direction: row;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .socials {
-      justify-content: flex-end;
-    }
-  }
-</style>
+<div
+    class="w-screen b-1 lg:bx-16 lg:by-8 border-t-2 border-slate-t-300 flex flex-col lg:flex-row items-center justify-around bg-slate-900 text-white"
+>
+    <h1>Lilian Brossard</h1>
+    <h3>© All Rights Reserved</h3>
+</div>

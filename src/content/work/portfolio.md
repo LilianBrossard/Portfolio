@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 publishDate: 2024-02-02 00:00:00
-img: /portfolio/assets/portfolio.png
+img: /assets/portfolio.png
 img_alt: screen du site web
 code: https://github.com/LilianBrossard/portfolio
 site: https://lilianbrossard.github.io/portfolio/

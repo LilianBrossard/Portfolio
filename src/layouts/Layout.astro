@@ -1,0 +1,46 @@
+---
+import "aos/dist/aos.css";
+import "@/styles/globals.css";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="portfolio de lilian brossard" />
+		<meta
+			name="keywords"
+			content="portfolio, frontend, développeur, développeur frontend, web development, HTML, CSS, JavaScript, React, Astro, Lilian Brossard, Brossard, SQL, C, Java, alternance, Lannion, Lorient, Bretagne, Bordeaux"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/profile.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body
+		class="font-sans bg-gradient-to-b from-slate-900 to-slate-700 overflow-x-hidden"
+	>
+		<slot />
+		<script>
+			//npm install aos --save
+			//https://michalsnik.github.io/aos/
+			import AOS from "aos";
+			AOS.init({
+				once: false, // change this to false if it's set to true
+				offset: 200,
+				duration: 1000,
+			});
+			window.addEventListener("load", AOS.refresh);
+		</script>
+		<script>
+			//https://yaireo.github.io/rellax/
+			import Rellax from "rellax";
+			var rellax = new Rellax(".rellax");
+		</script>
+	</body>
+</html>

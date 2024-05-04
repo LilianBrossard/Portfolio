@@ -1,7 +1,7 @@
 ---
 title: Anvil Aerospace
 publishDate: 2024-01-27 00:00:00
-img: /portfolio/assets/anvil.png
+img: /assets/anvil.png
 img_alt: screen du site web
 code: https://github.com/LilianBrossard/anvil
 site: https://lilianbrossard.github.io/anvil/
