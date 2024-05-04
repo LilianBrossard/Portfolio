@@ -3,8 +3,8 @@ title: Portfolio
 publishDate: 2024-02-02 00:00:00
 img: /assets/portfolio.png
 img_alt: screen du site web
-code: https://portfolio-mu-five-87.vercel.app
-site: https://lilianbrossard.github.io/portfolio/
+code: https://github.com/LilianBrossard/portfolio
+site: https://portfolio-mu-five-87.vercel.app
 description: |
   J'ai travaillé sur ce portfolio sur lequel vous regardez actuellement cet article. 
 tags:

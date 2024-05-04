@@ -16,7 +16,7 @@ tags:
 ---
 
 Ce projet consiste à la présentation sur un jeu vidéo de notre pays.
-Ce projet m'a permis de découvrir les rudiments de Hygraph, les variables d'environnement et d'améliorer ma génération de page automatique pour des postes.
+Ce projet m'a permis de découvrir les rudiments de Hygraph (un headless CMS) , les variables d'environnement et d'améliorer ma génération de page automatique pour des postes avec Astro.
 J'ai donc pu administrer les bases de données avec des accès sécurisés pour d'autres utilisateurs et ainsi leurs permettre en temps réel d'apporter des modifications au site sans passer par des lignes de code.
 J'ai également procédé à des optimisations de requête API pour économiser de la bande passante.
 J'ai également amélioré ma gestion des différents modèles d'écran en réalisant le site avec Tailwind CSS et les visuels par la même occasion.

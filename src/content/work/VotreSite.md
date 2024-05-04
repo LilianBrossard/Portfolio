@@ -17,6 +17,6 @@ tags:
 
 Ce projet consiste à créer un site qui pourrait être celui d'une entreprise de la tech et de l'innovation que j'ai d'abord conçues et réfléchi sur des maquettes avant d'être réalisé.
 Ce projet m'a permis d'améliorer et de maîtriser Hygraph et son administration, et d'optimiser une véritable arborescence complexe dans les pages du site.
-J'ai également peaufiné ma maîtrise de TailwindCss et Hygraph ainsi qu'Astro dans la réalisation de site web.
-J'ai Optimiser les requêtes API en les places dans des fonctions Javascript pour augmenter la lisibilité et la propreté du code
+J'ai également peaufiné ma maîtrise de TailwindCss et Hygraph (un headless CMS) ainsi qu'Astro dans la réalisation de site web.
+J'ai Optimiser les requêtes API en les factorisant dans des fonctions Javascript pour augmenter la lisibilité et la propreté du code
 Pour conclure, ce projet m'a permis de me perfectionner avec Hygraph et Tailwind CSS.
