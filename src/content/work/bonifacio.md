@@ -13,4 +13,4 @@ tags:
 
 Bonifacio fut le premier site pour m'entraîner avec mes premiers cours de web, avec les bases de css, html. J'ai donc recopié un site d'entraînement avec seulement une image à imiter.
 
-Avec dès connaissance sommaire, j'ai donc recréé ce site d'exercice.
+Avec des connaissances sommaires, j'ai donc recréé ce site d'exercice et m'ai permis d'améliorer ma compétence de réalisation d'application web.

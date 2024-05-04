@@ -27,4 +27,4 @@ J'ai créé à partir de rien une charte graphique et imaginer la DA qui va auto
 J'ai pu ajouter un carrousel pour parcourir les clichés des vaisseaux.
 
 
-Pour conclure, ce projet m'a apporté beaucoup de connaissances.
+Pour conclure, ce projet m'a permis d'améliorer ma compétence de réalisation d'application web.

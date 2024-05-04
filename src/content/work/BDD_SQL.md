@@ -14,8 +14,8 @@ tags:
   - BDD
 ---
 
-Ce projet dans le cadre des études a nécessité plusieurs étapes :
+Ce projet en duo dans le cadre des études a nécessité plusieurs étapes :
 
 Tout d'abord, création d'un diagramme de classe comme si dessus a partir d'un descriptif de la base de données en groupe de 2.
 
-Puis la création en PostgreSQL de cette base de données et la mise en place sur un serveur local.
+Puis la création et gestion en PostgreSQL de cette base de données et la mise en place sur un serveur local.
