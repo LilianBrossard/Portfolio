@@ -1,30 +1,195 @@
 ---
 import PrevOutils from "./PrevOutils.astro";
-import Content from "./Content.astro";
+import PrevOutilsTel from "./PrevOutilsTel.astro";
 ---
 
-<Content>
-    <div class="m-0 p-2 border-b-2 border-b-slate-300">
-        <h2 class="text-xl lg:text-2xl">Voici les outils que je maîtrise</h2>
+<div class="w-screen h-full mb-48 hidden lg:block">
+    <h1 class="text-6xl font-bold text-center text-black">
+        Les Outils que je Maîtrises
+    </h1>
+    <div class="p-2 flex flex-row flex-wrap justify-between">
+        <PrevOutils
+            url="/assets/github.svg"
+            titre="Github"
+            text="Github est un service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git."
+            site="https://github.com/"
+        />
+        <PrevOutils
+            url="/assets/gitlab.svg"
+            titre="Gitlab"
+            text="Gitlab est un service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git."
+            site="https://about.gitlab.com/"
+        />
+        <PrevOutils
+            url="/assets/css.svg"
+            titre="CSS"
+            text="CSS n'est pas vraiment un langage de programmation. C'est un langage de feuille de style, c'est-à-dire qu'il permet d'appliquer des styles sur différents éléments sélectionnés dans un document HTML."
+            site="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics"
+        />
+        <PrevOutils
+            url="/assets/html.svg"
+            titre="HTML"
+            text="HTML est un langage de balisage qui définit la structure du contenu. Un document HTML est une suite d'éléments utilisés pour encadrer différentes parties du contenu afin de les faire apparaître ou se comporter d'une certaine façon."
+            site="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics"
+        />
+        <PrevOutils
+            url="/assets/astro.svg"
+            titre="Astro"
+            text="Le framework Web pour les sites Web axés sur le contenu. Astro alimente les sites Web les plus rapides au monde, les applications Web côté client, les points de terminaison d'API dynamiques."
+            site="https://astro.build/"
+        />
+        <PrevOutils
+            url="/assets/react.svg"
+            titre="React"
+            text="Une bibliothèque JavaScript pour créer des interfaces utilisateurs"
+            site="https://fr.legacy.reactjs.org/"
+        />
+        <PrevOutils
+            url="/assets/hygraph.jpg"
+            titre="Hygraph"
+            text="Le CMS headless qui alimente le contenu pour les applications critiques.Créez rapidement des solutions grâce à une approche GraphQL native API-first"
+            site="https://hygraph.com/"
+        />
+        <PrevOutils
+            url="/assets/tailwind.svg"
+            titre="Tailwind CSS"
+            text="Tailwind CSS fonctionne en analysant tous vos fichiers HTML, composants JavaScript et tout autre modèle à la recherche de noms de classe, en générant les styles correspondants, puis en les écrivant dans un fichier CSS statique."
+            site="https://tailwindcss.com/"
+        />
+        <PrevOutils
+            url="/assets/shadcn.png"
+            titre="Shadcn/ui"
+            text="Des composants web conçus que vous pouvez utilisé dans vos applications. "
+            site="https://ui.shadcn.com/"
+        />
+        <PrevOutils
+            url="/assets/bash.svg"
+            titre="Bash"
+            text="Bash est un interpréteur de commandes, un langage de script et un environnement de ligne de commande pour les systèmes d'exploitation Unix et Linux."
+            site="https://www.gnu.org/software/bash/"
+        />
+        <PrevOutils
+            url="/assets/c.svg"
+            titre="C"
+            text="Le langage C est un langage de programmation impératif et de bas niveau, connu pour sa performance, sa portabilité et son utilisation étendue dans le développement système et logiciel."
+            site="https://www.gnu.org/software/gnu-c-manual/"
+        />
+        <PrevOutils
+            url="/assets/docker.svg"
+            titre="Docker"
+            text="Docker est une plateforme logicielle qui permet de créer, déployer et gérer des applications dans des conteneurs, fournissant ainsi un environnement isolé pour exécuter des logiciels avec toutes leurs dépendances, de manière portable et reproductible."
+            site="https://www.docker.com/"
+        />
+        <PrevOutils
+            url="/assets/postgresql.svg"
+            titre="PostgreSQL"
+            text="PostgreSQL est un système de gestion de base de données relationnelle open-source, connu pour sa fiabilité, sa robustesse et sa capacité à gérer de grands volumes de données."
+            site="https://www.postgresql.org/"
+        />
+        <PrevOutils
+            url="/assets/python.svg"
+            titre="Python"
+            text="Python est un langage de programmation polyvalent, haut niveau et interprété, apprécié pour sa simplicité syntaxique."
+            site="https://www.python.org/"
+        />
+        <PrevOutils
+            url="/assets/php.svg"
+            titre="PHP"
+            text="PHP est un langage de script côté serveur utilisé pour le développement web, permettant la création de pages web dynamiques et l'interaction avec des bases de données."
+            site="https://www.php.net/"
+        />
+        <PrevOutils
+            url="/assets/linux.svg"
+            titre="Linux"
+            text="Linux est un système d'exploitation open-source basé sur le noyau Linux, largement utilisé pour ses performances, sa sécurité et sa flexibilité, principalement dans les environnements serveur et embarqués."
+            site="https://www.linux.org/"
+        />
     </div>
-    <div class="w-full h-full bg-cover bg-[url('/assets/pilliers.jpg')]">
-        <div class="p-2 flex flex-row flex-wrap">
-            <PrevOutils url="/assets/github.svg" text="Github" />
-            <PrevOutils url="/assets/gitlab.svg" text="Gitlab" />
-            <PrevOutils url="/assets/css.svg" text="CSS" />
-            <PrevOutils url="/assets/html.svg" text="HTML" />
-            <PrevOutils url="/assets/astro.svg" text="Astro" />
-            <PrevOutils url="/assets/react.svg" text="React" />
-            <PrevOutils url="/assets/hygraph.jpg" text="Hygraph" />
-            <PrevOutils url="/assets/tailwind.svg" text="Tailwind CSS" />
-            <PrevOutils url="/assets/shadcn.png" text="Shadcn/ui" />
-            <PrevOutils url="/assets/bash.svg" text="Bash" />
-            <PrevOutils url="/assets/c.svg" text="C" />
-            <PrevOutils url="/assets/docker.svg" text="Docker" />
-            <PrevOutils url="/assets/postgresql.svg" text="PostgreSQL" />
-            <PrevOutils url="/assets/python.svg" text="Python" />
-            <PrevOutils url="/assets/php.svg" text="PHP" />
-            <PrevOutils url="/assets/linux.svg" text="Linux" />
-        </div>
+</div>
+<div class="w-screen h-full mb-48 block lg:hidden">
+    <h1 class="text-3xl font-bold text-center text-black">
+        Les Outils que je Maîtrises
+    </h1>
+    <div class="p-2 flex flex-row flex-wrap justify-between">
+        <PrevOutilsTel
+            url="/assets/github.svg"
+            titre="Github"
+            site="https://github.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/gitlab.svg"
+            titre="Gitlab"
+            site="https://about.gitlab.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/css.svg"
+            titre="CSS"
+            site="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics"
+        />
+        <PrevOutilsTel
+            url="/assets/html.svg"
+            titre="HTML"
+            site="https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/HTML_basics"
+        />
+        <PrevOutilsTel
+            url="/assets/astro.svg"
+            titre="Astro"
+            site="https://astro.build/"
+        />
+        <PrevOutilsTel
+            url="/assets/react.svg"
+            titre="React"
+            site="https://fr.legacy.reactjs.org/"
+        />
+        <PrevOutilsTel
+            url="/assets/hygraph.jpg"
+            titre="Hygraph"
+            site="https://hygraph.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/tailwind.svg"
+            titre="Tailwind CSS"
+            site="https://tailwindcss.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/shadcn.png"
+            titre="Shadcn/ui"
+            site="https://ui.shadcn.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/bash.svg"
+            titre="Bash"
+            site="https://www.gnu.org/software/bash/"
+        />
+        <PrevOutilsTel
+            url="/assets/c.svg"
+            titre="C"
+            site="https://www.gnu.org/software/gnu-c-manual/"
+        />
+        <PrevOutilsTel
+            url="/assets/docker.svg"
+            titre="Docker"
+            site="https://www.docker.com/"
+        />
+        <PrevOutilsTel
+            url="/assets/postgresql.svg"
+            titre="PostgreSQL"
+            site="https://www.postgresql.org/"
+        />
+        <PrevOutilsTel
+            url="/assets/python.svg"
+            titre="Python"
+            site="https://www.python.org/"
+        />
+        <PrevOutilsTel
+            url="/assets/php.svg"
+            titre="PHP"
+            site="https://www.php.net/"
+        />
+        <PrevOutilsTel
+            url="/assets/linux.svg"
+            titre="Linux"
+            site="https://www.linux.org/"
+        />
     </div>
-</Content>
+</div>

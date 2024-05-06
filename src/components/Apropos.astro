@@ -1,0 +1,53 @@
+---
+import CardPerso from "./CardPerso.astro";
+import CardPersoTel from "./CardPersoTel.astro";
+---
+
+<div
+    class="w-full h-[1500px] lg:h-[900px] lg:justify-around lg:flex lg:flex-row bg-black p-2 lg:p-8 hidden"
+>
+    <div class="flex flex-col w-full lg:w-1/2 lg:mr-2 h-full">
+        <div class="w-full m-2 h-full">
+            <CardPerso
+                titre="Formation"
+                text="Je suis actuellement en BUT informatique. Je suis diplômé d'un bac général avec les spécialisations physique-chimie et NSI (informatique) avec des options de droit et de robotique. Et j'ai également un PSC1, (un diplôme de premier secours)"
+            />
+        </div>
+        <div class="w-full m-2 h-full">
+            <CardPerso
+                titre="Mes Savoir être"
+                text="j'aime le travail d'équipe, Je suis passionné, ponctuel, sérieux et très curieux."
+            />
+        </div>
+    </div>
+    <div class="flex flex-col w-full lg:w-1/2 lg:ml-2 h-full m-2">
+        <CardPerso
+            titre="Qui suis-je ?"
+            text="Je suis passionné depuis longtemps d'informatique, de programmation et plus récemment de design. Je poursuis mes études dans l'objectif d'en apprendre toujours plus sur ces sujets. Je vie entre Lorient et Lannion en Bretagne. J'aime écouter de la musique, jouer à des jeux vidéos, regarder des films et les séries. J'adore créer, de tout ! J'ai pour objectif de toujours m'améliorer pour un jour m'approcher de la perfection dans le plus de domaines possible. De plus j'aime travailler en équipe, cela permet d'échanger, d'avoir des retours et ainsi de s'adapter en conséquence, pour produire le meilleur résultat possible."
+        />
+    </div>
+</div>
+<div
+    class="w-full h-[1500px] lg:h-[900px] justify-around flex flex-col bg-black p-2 lg:p-8 lg:hidden"
+>
+    <div class="flex flex-col w-full lg:w-1/2 lg:ml-2 h-full m-2">
+        <CardPersoTel
+            titre="Qui suis-je ?"
+            text="Je suis passionné depuis longtemps d'informatique, de programmation et plus récemment de design. Je poursuis mes études dans l'objectif d'en apprendre toujours plus sur ces sujets. Je vie entre Lorient et Lannion en Bretagne. J'aime écouter de la musique, jouer à des jeux vidéos, regarder des films et les séries. J'adore créer, de tout ! J'ai pour objectif de toujours m'améliorer pour un jour m'approcher de la perfection dans le plus de domaines possible. De plus j'aime travailler en équipe, cela permet d'échanger, d'avoir des retours et ainsi de s'adapter en conséquence, pour produire le meilleur résultat possible."
+        />
+    </div>
+    <div class="flex flex-col w-full lg:w-1/2 lg:mr-2 h-full">
+        <div class="w-full m-2 h-full">
+            <CardPersoTel
+                titre="Formation"
+                text="Je suis actuellement en BUT informatique. Je suis diplômé d'un bac général avec les spécialisations physique-chimie et NSI (informatique) avec des options de droit et de robotique. Et j'ai également un PSC1, (un diplôme de premier secours)"
+            />
+        </div>
+        <div class="w-full m-2 h-full">
+            <CardPersoTel
+                titre="Mes Savoir être"
+                text="j'aime le travail d'équipe, Je suis passionné, ponctuel, sérieux et très curieux."
+            />
+        </div>
+    </div>
+</div>

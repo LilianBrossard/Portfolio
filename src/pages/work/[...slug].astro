@@ -5,7 +5,6 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Tag from "../../components/Tag.astro";
-import Titre from "../../components/Titre.astro";
 
 interface Props {
   entry: CollectionEntry<"work">;
@@ -27,96 +26,102 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
-  <div class="bg-repeat-y bg-[url('/assets/star.jpg')] w-screen h-full">
-    <Header />
-    <Titre
-      ><h1 class="text-white text-2xl lg:text-4xl z-20">{entry.data.title}</h1>
-    </Titre>
-    <main class="m-2 lg:my-4 lg:mx-20">
-      <div class="flex flex-row flex-warp">
-        {
-          entry.data.tags.map((t) => (
-            <div class="m-1 lg:mx-2">
-              <Tag>{t}</Tag>
-            </div>
-          ))
-        }
-      </div>
+  <Header />
+  <main class="m-2 lg:my-4 lg:mx-20">
+    <div class="h-4 lg:h-16"></div>
+    <h1
+      class="text-sky-600 lg:font-bold text-2xl lg:text-4xl xl:text-8xl xl:wb-4 z-20"
+    >
+      {entry.data.title}
+    </h1>
+    <div class="flex flex-row flex-warp">
+      {
+        entry.data.tags.map((t) => (
+          <div class="m-1 lg:mx-2">
+            <Tag>{t}</Tag>
+          </div>
+        ))
+      }
+    </div>
 
+    <h2 class="text-black text-xl lg:text-2xl xl:text-4xl">
+      {entry.data.description}
+    </h2>
+
+    <div class="mt-4 block lg:hidden">
+      {
+        entry.data.img && (
+          <img
+            src={entry.data.img}
+            alt={entry.data.img_alt || ""}
+            class="bg-transparent border-b-4 border-r-4 border-b-sky-400 border-r-sky-400 rounded-xl lg:rounded-xl shadow-lg object-contain"
+          />
+        )
+      }
       <div
-        class="p-2 m-6 w-1/8 bg-slate-900 border-2 border-slate-300 lg:-skew-y-6 lg:rotate-6"
+        class="p-2 m-6 w-1/8 lg:p-6 bg-slate-100 rounded-lg border-t-4 border-t-sky-400 shadow-lg"
       >
-        <h2 class="text-white text-xl lg:text-2xl">
-          {entry.data.description}
-        </h2>
+        <Content />
       </div>
-
-      <div>
-        {
-          entry.data.img && (
-            <img
-              data-aos="flip-up"
-              src={entry.data.img}
-              alt={entry.data.img_alt || ""}
-              class="bg-transparent border-b-4 border-r-4 border-b-slate-50 border-r-slate-50 p-4"
-            />
-          )
-        }
-        <div
-          class="p-2 m-6 w-1/8 lg:p-6 bg-slate-900 border-2 border-slate-300 lg:-skew-y-6 lg:rotate-6"
-        >
-          <div class="lg:skew-y-6 lg:-rotate-6">
-            <Content />
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row justify-around">
-          <div
-            class="p-2 m-6 w-1/8 bg-slate-900 border-2 border-slate-300 lg:-skew-y-6 lg:rotate-6 lg:duration-500 lg:hover:scale-110"
-          >
-            <div class="lg:skew-y-6 lg:-rotate-6">
-              {
-                entry.data.code && (
-                  <a
-                    href={entry.data.code}
-                    target="_blank"
-                    class="flex flex-row justify-around items-center "
-                  >
-                    <img
-                      class="w-12 h-12"
-                      src="/assets/code.svg"
-                      alt="logo de code"
-                    />
-                    Lien vers le code Git
-                  </a>
-                )
-              }
-            </div>
-          </div>
-          <div
-            class="p-2 m-6 w-1/8 bg-slate-900 border-2 border-slate-300 lg:-skew-y-6 lg:rotate-6 lg:duration-500 lg:hover:scale-110"
-          >
-            <div class="lg:skew-y-6 lg:-rotate-6">
-              {
-                entry.data.site && (
-                  <a
-                    href={entry.data.site}
-                    target="_blank"
-                    class="flex flex-row justify-around items-center "
-                  >
-                    <img
-                      class="w-12 h-12"
-                      src="/assets/site.svg"
-                      alt="logo de site"
-                    />
-                    Lien vers le site web
-                  </a>
-                )
-              }
-            </div>
-          </div>
-        </div>
+    </div>
+    <div
+      class="mt-4 p-4 hidden lg:flex flex-row bg-slate-100 rounded-lg border-t-4 border-t-sky-400 shadow-lg"
+    >
+      {
+        entry.data.img && (
+          <img
+            src={entry.data.img}
+            alt={entry.data.img_alt || ""}
+            class="bg-transparent border-b-4 border-r-4 border-b-sky-400 border-r-sky-400 rounded-xl lg:rounded-xl shadow-lg max-w-[500px] object-contain"
+          />
+        )
+      }
+      <div class="p-2 m-6 w-1/8 lg:p-6">
+        <Content />
       </div>
-    </main>
-    <Footer />
-  </div>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-around">
+      <a
+        href={entry.data.code}
+        target="_blank"
+        class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
+      >
+        <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
+          {
+            entry.data.code && (
+              <div class="flex flex-row justify-around items-center ">
+                <img
+                  class="w-12 h-12"
+                  src="/assets/code.svg"
+                  alt="logo de code"
+                />
+                Lien vers le code Git
+              </div>
+            )
+          }
+        </div>
+      </a>
+      <a
+        href={entry.data.code}
+        target="_blank"
+        class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
+      >
+        <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
+          {
+            entry.data.code && (
+              <div class="flex flex-row justify-around items-center ">
+                <img
+                  class="w-12 h-12"
+                  src="/assets/site.svg"
+                  alt="logo de site"
+                />
+                Lien vers le site web
+              </div>
+            )
+          }
+        </div>
+      </a>
+    </div>
+  </main>
+  <Footer />
 </Layout>

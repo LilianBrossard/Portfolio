@@ -1,15 +1,153 @@
 ---
 interface Props {
     url: string;
+    titre: string;
     text: string;
+    site?: string;
 }
 
-const { url, text } = Astro.props;
+const { url, text, titre, site } = Astro.props;
 ---
 
-<div
-    class="w-48 h-16 p-1 lg:p-2 m-2 lg:m-4 flex flex-row flex-nowrap lg:hover:scale-110 lg:duration-500 bg-slate-900 border-2 border-slate-300 items-center justify-around"
->
-    <img src={url} alt={text} class="w-12 h-12" />
-    <h3 class="text-text-xl lg:text-2xl text-white">{text}</h3>
+<!-- https://codepen.io/sumanengbd/pen/vYBemNY -->
+<div class="container w-[300px] h-[220px] hover:z-20">
+    <div class="card w-full">
+        <div class="face face1">
+            <div class="content flex flex-row items-center justify-around">
+                <img src={url} alt={titre} class="w-12 h-12 mr-2" />
+                <h3
+                    class="ml-2 text-text-xl lg:text-2xl text-white font-medium"
+                >
+                    {titre}
+                </h3>
+            </div>
+        </div>
+        <div class="face face2">
+            <div class="content">
+                <p class="text-black line-clamp-5">
+                    {text}
+                </p>
+                {
+                    site && site !== "any place" && (
+                        <a href={site} target="_blank">
+                            En savoir plus
+                        </a>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+    <style>
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .header {
+                margin: 0 auto;
+                text-align: center;
+                h1 {
+                    color: #fff;
+                    font-weight: 900;
+                }
+                p {
+                    color: #fff;
+                    max-width: 650px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .card {
+                position: relative;
+                margin-left: 9px;
+                margin-right: 9px;
+                .face {
+                    position: relative;
+                    width: 100%;
+                    max-width: 300px;
+                    height: 200px;
+                    transition: 0.5s;
+                    border-radius: 12px;
+                    &.face1 {
+                        position: relative;
+                        background: #334155;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 1;
+                        transform: translateY(100px);
+                    }
+                }
+                &:hover .face.face1 {
+                    transform: translateY(0);
+                    background-image: linear-gradient(
+                        to left bottom,
+                        #075985,
+                        #0369a1,
+                        #0284c7,
+                        #38bdf8,
+                        #7dd3fc
+                    );
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                .face.face1 .content {
+                    opacity: 0.8;
+                    transition: 0.5s;
+                }
+                &:hover .face.face1 .content {
+                    opacity: 1;
+                }
+                .face {
+                    &.face1 .content {
+                        img {
+                            max-width: 60px;
+                        }
+                        h3 {
+                            margin: 10px 0 0;
+                            padding: 0;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 1.5em;
+                        }
+                    }
+                    &.face2 {
+                        position: relative;
+                        background: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+                        transform: translateY(-100px);
+                    }
+                }
+                &:hover .face.face2 {
+                    transform: translateY(0);
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+                .face.face2 {
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    a {
+                        margin: 15px 0 0;
+                        display: inline-block;
+                        text-decoration: none;
+                        font-weight: 900;
+                        color: #334155;
+                        padding: 5px;
+                        border: 1px solid #334155;
+                        &:hover {
+                            background: #334155;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
 </div>

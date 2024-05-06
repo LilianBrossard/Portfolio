@@ -1,118 +1,44 @@
-<div class="h-8 lg:h-20"></div>
+---
+import Nav from "./Nav.astro";
+---
+
+<div class="h-4"></div>
 <header
     id="navbar"
-    class="bg-transparent w-screen fixed top-0 duration-300 h-8 lg:h-20 z-20"
+    class="bg-transparent w-screen fixed top-0 duration-300 h-8 lg:h-16 z-50"
 >
     <div
-        class="-z-20 drop-shadow-xl backdrop-blur-sm absolute h-8 lg:h-20 w-full border-b-4 border-b-slate-400"
+        class="-z-30 drop-shadow-xl backdrop-blur-sm absolute h-8 lg:h-16 w-full"
+    >
+    </div>
+    <div
+        class="-z-20 absolute h-8 lg:h-16 w-full bg-gradient-to-r from-slate-50 to-slate-200 opacity-50"
     >
     </div>
     <nav
         class="flex flex-row justify-between items-center w-full m-0.5 lg:m-1.5 lg:px-4"
     >
-        <a href="/#" class="lg:duration-500 lg:hover:scale-110">
-            <div
-                class="hidden lg:flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-            >
+        <a
+            href="/#"
+            class="lg:duration-500 lg:hover:scale-110 hidden lg:inline"
+        >
+            <div class="flex p-1 flex-row items-center">
                 <img src="/profile.svg" alt="profil" class="w-4 h-4" />
-                <h3 class="ml-2">Lilian Brossard</h3>
+                <h3 class="ml-2 aquire">LILIAN BROSSARD</h3>
             </div>
         </a>
-        <div></div>
-        <div>
-            <ul class="list-none">
-                <li
-                    class="lg:hover:scale-110 lg:duration-500 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 mx-0.5 lg:mx-2.5 min-w-20 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-700"
-                >
-                    <a href="/#Projet" class="no-underline">Projets</a>
-                </li>
-                <li
-                    class="lg:hover:scale-110 lg:duration-500 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 mx-0.5 lg:mx-2.5 min-w-20 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-700"
-                >
-                    <a href="/#Competences" class="no-underline">Compétences</a>
-                    <ul class="list-none">
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Realiser" class="no-underline"
-                                >Réaliser</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Optimiser" class="no-underline"
-                                >Optimiser</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Administrer" class="no-underline"
-                                >Administrer</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Gerer" class="no-underline">Gérer</a>
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Conduire" class="no-underline"
-                                >Conduire</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Collaborer" class="no-underline"
-                                >Collaborer</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li
-                    class="lg:hover:scale-110 lg:duration-500 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 mx-0.5 lg:mx-2.5 min-w-20 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-700"
-                >
-                    <a href="/#Propos" class="no-underline">A-propos</a>
-                    <ul class="list-none">
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#QuiSuisJe" class="no-underline"
-                                >Qui suis-je</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#Formation" class="no-underline"
-                                >Formation</a
-                            >
-                        </li>
-                        <li
-                            class="my-0.5 min-w-20 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-800"
-                        >
-                            <a href="/#SavoirEtre" class="no-underline"
-                                >Savoir-être</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li
-                    class="lg:hover:scale-110 lg:duration-500 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 mx-0.5 lg:mx-2.5 min-w-20 md:min-w-32 duration-500 bg-slate-900 float-left block p-0.5 lg:p-4 relative hover:cursor-pointer hover:bg-slate-700"
-                >
-                    <a href="#Contacte" class="no-underline">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div></div>
+        <a
+            href="/#"
+            class="lg:duration-500 lg:hover:scale-110 lg:hidden inline"
+        >
+            <div class="flex p-1 flex-row items-center">
+                <img src="/profile.svg" alt="profil" class="w-4 h-4" />
+            </div>
+        </a>
+        <Nav />
+        <div class="block lg:hidden"></div>
         <div class="hidden lg:flex flex-row justify-around items-center mx-4">
-            <div
-                class="p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 mx-2 lg:hover:scale-110 lg:duration-500"
-            >
+            <div class="p-1 -b-2 mx-2 lg:hover:scale-110 lg:duration-500">
                 <a href="https://github.com/LilianBrossard"
                     ><img
                         src="/assets/git.svg"
@@ -121,9 +47,7 @@
                     /></a
                 >
             </div>
-            <div
-                class="p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 mx-2 lg:hover:scale-110 lg:duration-500"
-            >
+            <div class="p-1 -b-2 mx-2 lg:hover:scale-110 lg:duration-500">
                 <a href="https://www.linkedin.com/in/lilian-brossard-1b6147294/"
                     ><img
                         src="/assets/linkedin.svg"
@@ -132,9 +56,7 @@
                     /></a
                 >
             </div>
-            <div
-                class="p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 mx-2 lg:hover:scale-110 lg:duration-500"
-            >
+            <div class="p-1 -b-2 mx-2 lg:hover:scale-110 lg:duration-500">
                 <a href="mailto:lilian.brossard@gmail.com"
                     ><img
                         src="/assets/mail.svg"
@@ -162,6 +84,9 @@
         visibility: visible;
         opacity: 1;
         display: block;
+    }
+    .aquire {
+        font-family: "aquireregular";
     }
 </style>
 <!-- menu scroll down/up  -->

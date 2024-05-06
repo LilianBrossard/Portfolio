@@ -1,0 +1,97 @@
+---
+interface Props {
+    titre: string;
+    text: string;
+}
+
+const { text, titre } = Astro.props;
+---
+
+<!-- https://codepen.io/sacsam005/pen/ZEvyVPg -->
+<div class="cardBox shadow-2xl w-full h-full">
+    <div class="card shadow-2xl">
+        <h2 class="text-sky-400 text-2xl lg:text-4xl xl:text-6xl">
+            {titre}
+        </h2>
+        <div class="content">
+            <p
+                class="text-white text-left leading-snug text-xl lg:text-2xl xl:text-4xl>"
+            >
+                {text}
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .cardBox {
+        position: relative;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .card {
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        background: #020617;
+        border-radius: 20px;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #ffffff;
+        overflow: hidden;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .card .content h3 {
+        font-size: 3rem;
+        padding-bottom: 10px;
+    }
+
+    .cardBox::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 500%;
+        background: #40e0d0;
+        background: -webkit-linear-gradient(
+            to right,
+            #075985,
+            #0369a1,
+            #0284c7,
+            #38bdf8,
+            #7dd3fc
+        );
+        background: linear-gradient(
+            to right,
+            #075985,
+            #0369a1,
+            #0284c7,
+            #38bdf8,
+            #7dd3fc
+        );
+        animation: glowing01 7s linear infinite;
+        transform-origin: center;
+        animation: glowing 7s linear infinite;
+    }
+
+    @keyframes glowing {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>

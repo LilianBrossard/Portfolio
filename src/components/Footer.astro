@@ -1,73 +1,61 @@
 ---
-import Titre from "./Titre.astro";
+
 ---
 
-<div id="Contacte">
-    <Titre
-        ><h1 class="text-white text-2xl lg:text-4xl z-20">Contactez-moi</h1>
-    </Titre>
-</div>
-<div class="w-screen m-1 lg:mx-32 lg:my-8 flex flex-col justify-around">
+<div id="Contact"></div>
+<div
+    class="w-screen p-1 lg:px-32 lg:py-8 flex flex-col justify-around bg-gradient-to-r from-sky-950 to-sky-500"
+>
     <a
         href="mailto:lilian.brossard@mail.com"
-        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+        class="lg:duration-500 lg:hover:scale-y-110 w-7/8 lg:w-3/4 my-2"
     >
-        <div
-            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-        >
+        <div class="flex p-1 flex-row items-center rounded-lg">
             <img src="/assets/mail.svg" alt="mail" class="w-8 h-8" />
-            <h3 class="ml-2">lilian.brossard@gmail.com</h3>
+            <h3 class="ml-2 text-white">lilian.brossard@gmail.com</h3>
         </div>
     </a>
-    <div class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2">
-        <div
-            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-        >
+    <div class="lg:duration-500 lg:hover:scale-y-110 w-7/8 lg:w-3/4 my-2">
+        <div class="flex p-1 flex-row items-center rounded-lg">
             <img src="/assets/tel.svg" alt="telephone" class="w-8 h-8" />
-            <h3 class="ml-2">06 47 57 78 28</h3>
+            <h3 class="ml-2 text-white">06 47 57 78 28</h3>
         </div>
     </div>
     <a
         href="https://github.com/LilianBrossard"
         target="_blank"
-        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+        class="lg:duration-500 lg:hover:scale-y-110 w-7/8 lg:w-3/4 my-2"
     >
-        <div
-            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-        >
+        <div class="flex p-1 flex-row items-center rounded-lg">
             <img src="/assets/git.svg" alt="github logo" class="w-8 h-8" />
-            <h3 class="ml-2">Mon GitHub</h3>
+            <h3 class="ml-2 text-white">Mon GitHub</h3>
         </div>
     </a>
     <a
         href="https://www.linkedin.com/in/lilian-brossard-1b6147294/"
         target="_blank"
-        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+        class="lg:duration-500 lg:hover:scale-y-110 w-7/8 lg:w-3/4 my-2"
     >
-        <div
-            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-        >
+        <div class="flex p-1 flex-row items-center rounded-lg">
             <img src="/assets/linkedin.svg" alt="linkedin" class="w-8 h-8" />
-            <h3 class="ml-2">LinkedIn</h3>
+            <h3 class="ml-2 text-white">LinkedIn</h3>
         </div>
     </a>
     <a
         href="/assets/CV_LilianBrossard.pdf"
         target="_blank"
-        class="lg:duration-500 lg:hover:scale-110 w-7/8 lg:w-3/4 my-2"
+        class="lg:duration-500 lg:hover:scale-y-110 w-7/8 lg:w-3/4 my-2"
     >
-        <div
-            class="flex p-1 -skew-y-6 rotate-6 border-b-2 border-slate-b-300 border-r-2 border-slate-r-300 bg-slate-900 flex-row items-center"
-        >
+        <div class="flex p-1 flex-row items-center rounded-lg">
             <img src="/assets/pdf.svg" alt="pdf" class="w-8 h-8" />
-            <h3 class="ml-2">Mon Cv</h3>
+            <h3 class="ml-2 text-white">Mon Cv</h3>
         </div>
     </a>
 </div>
 
 <div
-    class="w-screen b-1 lg:bx-16 lg:by-8 border-t-2 border-slate-t-300 flex flex-col lg:flex-row items-center justify-around bg-slate-900 text-white"
+    class="w-screen b-1 lg:bx-16 lg:by-8 border-t-2 border-slate-t-300 flex flex-col lg:flex-row items-center justify-around bg-slate-950"
 >
-    <h1>Lilian Brossard</h1>
-    <h3>© All Rights Reserved</h3>
+    <h1 class="text-white">Lilian Brossard</h1>
+    <h3 class="text-white">© All Rights Reserved</h3>
 </div>

@@ -2,42 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'aquirebold';
+  src: url('../font/aquirebold-8ma601-webfont.woff2') format('woff2'),
+    url('../font/aquirebold-8ma601-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'aquireregular';
+  src: url('../font/aquire-bw0ox1-webfont.woff2') format('woff2'),
+    url('../font/aquire-bw0ox1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'aquirelight';
+  src: url('../font/aquirelight-yze0o1-webfont.woff2') format('woff2'),
+    url('../font/aquirelight-yze0o1-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 h1 {
-  color: white;
+  color: black;
   font-size: 2rem;
 }
 
 h2 {
-  color: white;
+  color: black;
   font-size: 1.5rem;
 }
 
 h3 {
-  color: white;
+  color: black;
   font-size: 1.25rem;
 }
 
 h4 {
-  color: white;
+  color: black;
   font-size: 1rem;
 }
 
 h5 {
-  color: white;
+  color: black;
   font-size: 0.875rem;
 }
 
 h6 {
-  color: white;
+  color: black;
   font-size: 0.75rem;
 }
 
 p {
-  color: white;
+  color: black;
   font-size: 1rem;
 }
 
 a {
-  color: white;
+  color: black;
   font-size: 1rem;
 }

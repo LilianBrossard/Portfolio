@@ -4,20 +4,11 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import TopPage from "../components/TopPage.astro";
-import Titre from "../components/Titre.astro";
 import Outils from "../components/Outils.astro";
-import Formation from "../components/Formation.astro";
-import QuiSuisJe from "../components/QuiSuisJe.astro";
-import SavoirEtre from "../components/SavoirEtre.astro";
-import PortfolioPreview from "../components/PortfolioPreview.astro";
 import Footer from "../components/Footer.astro";
-
-import Realiser from "../components/Realiser.astro";
-import Optimiser from "../components/Optimiser.astro";
-import Administrer from "../components/Administrer.astro";
-import Gerer from "../components/Gerer.astro";
-import Conduire from "../components/Conduire.astro";
-import Collaborer from "../components/Collaborer.astro";
+import Apropos from "../components/Apropos.astro";
+import Competences from "../components/Competences.astro";
+import Projet from "../components/Projet.astro";
 
 const projects = (await getCollection("work")).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
@@ -26,87 +17,20 @@ const projects = (await getCollection("work")).sort(
 
 <Layout title="Lilian Brossard">
 	<main>
-		<!-- https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?w=1920&h=1080&portrait=0&s=1&q=60&ver=apr-29-5&src=https://www.islamicity.org/covers/Allah/images/01-universe-declares/07-010.jpg&portrait=0&filemtime=1556437343&ttv= -->
-		<div class="bg-repeat-y bg-[url('/assets/star.jpg')] w-screen h-full">
-			<Header />
-			<TopPage />
-			<Titre
-				><h1 class="text-white text-2xl lg:text-4xl z-20">
-					Outils maitrisés
-				</h1>
-			</Titre>
-			<div data-aos="fade-right">
-				<Outils />
-			</div>
-			<div id="Propos">
-				<Titre
-					><h1 class="text-white text-2xl lg:text-4xl z-20">
-						A-Propos
-					</h1>
-				</Titre>
-			</div>
-			<div id="QuiSuisJe">
-				<div data-aos="fade-left">
-					<QuiSuisJe />
-				</div>
-			</div>
-			<div id="Formation">
-				<div data-aos="fade-right">
-					<Formation />
-				</div>
-			</div>
-			<div id="SavoirEtre">
-				<div data-aos="fade-left">
-					<SavoirEtre />
-				</div>
-			</div>
-			<div class="h-8"></div>
-			<!-- https://static.vecteezy.com/system/resources/previews/003/692/649/large_2x/beautiful-clear-blue-sky-in-summer-look-lke-heaven-free-photo.jpg -->
-
-			<div id="Projet">
-				<Titre
-					><h1 class="text-white text-2xl lg:text-4xl z-20">
-						Mes Projets
-					</h1>
-				</Titre>
-			</div>
-			<div class="listPreview">
-				{
-					projects.map((project) => (
-						<div class="w-screen" data-aos="fade-up">
-							<PortfolioPreview project={project} />
-						</div>
-					))
-				}
-			</div>
-
-			<div id="Competences">
-				<Titre
-					><h1 class="text-white text-2xl lg:text-4xl z-20">
-						Les Compétences Techniques
-					</h1>
-				</Titre>
-			</div>
-			<div data-aos="fade-right">
-				<Realiser />
-			</div>
-			<div data-aos="fade-left">
-				<Optimiser />
-			</div>
-			<div data-aos="fade-right">
-				<Administrer />
-			</div>
-			<div data-aos="fade-left">
-				<Gerer />
-			</div>
-			<div data-aos="fade-right">
-				<Conduire />
-			</div>
-			<div data-aos="fade-left">
-				<Collaborer />
-			</div>
-
-			<Footer />
+		<Header />
+		<TopPage />
+		<div data-aos="fade-up">
+			<Outils />
 		</div>
+		<div id="Propos" data-aos="fade-up">
+			<Apropos />
+		</div>
+		<div id="Projet" data-aos="fade-up">
+			<Projet />
+		</div>
+		<div id="Competences">
+			<Competences />
+		</div>
+		<Footer />
 	</main>
 </Layout>
