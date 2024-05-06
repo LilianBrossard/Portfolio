@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 publishDate: 2024-02-02 00:00:00
-img: /assets/portfolio.png
+img: /assets/monportfolio.png
 img_alt: screen du site web
 code: https://github.com/LilianBrossard/portfolio
 site: https://portfolio-mu-five-87.vercel.app
