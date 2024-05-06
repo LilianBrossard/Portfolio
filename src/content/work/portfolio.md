@@ -6,7 +6,7 @@ img_alt: screen du site web
 code: https://github.com/LilianBrossard/portfolio
 site: https://portfolio-mu-five-87.vercel.app
 description: |
-  J'ai travaillé sur ce portfolio sur lequel vous regardez actuellement cet article. 
+  J'ai conçu sur ce portfolio que vous regardez actuellement cet article. 
 tags:
   - Réaliser
   - Conduire
