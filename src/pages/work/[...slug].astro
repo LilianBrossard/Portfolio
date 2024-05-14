@@ -81,14 +81,14 @@ const { Content } = await entry.render();
       </div>
     </div>
     <div class="flex flex-col lg:flex-row justify-around">
-      <a
-        href={entry.data.code}
-        target="_blank"
-        class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
-      >
-        <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
-          {
-            entry.data.code && (
+      {
+        entry.data.code && (
+          <a
+            href={entry.data.code}
+            target="_blank"
+            class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
+          >
+            <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
               <div class="flex flex-row justify-around items-center ">
                 <img
                   class="w-12 h-12"
@@ -97,18 +97,18 @@ const { Content } = await entry.render();
                 />
                 Lien vers le code Git
               </div>
-            )
-          }
-        </div>
-      </a>
-      <a
-        href={entry.data.site}
-        target="_blank"
-        class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
-      >
-        <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
-          {
-            entry.data.code && (
+            </div>
+          </a>
+        )
+      }
+      {
+        entry.data.code && (
+          <a
+            href={entry.data.site}
+            target="_blank"
+            class="p-2 m-6 w-1/8 bg-gradient-to-r from-sky-500 to-sky-800 lg:duration-500 lg:hover:scale-110 rounded-lg"
+          >
+            <div class="bg-slate-100 rounded-lg p-2 w-[250px]">
               <div class="flex flex-row justify-around items-center ">
                 <img
                   class="w-12 h-12"
@@ -117,10 +117,10 @@ const { Content } = await entry.render();
                 />
                 Lien vers le site web
               </div>
-            )
-          }
-        </div>
-      </a>
+            </div>
+          </a>
+        )
+      }
     </div>
   </main>
   <Footer />
